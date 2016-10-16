@@ -1,0 +1,33 @@
+@mixin init-iconfont($folder: '') {
+  @font-face {font-family: "iconfont";
+    src: url('#{$folder}iconfont.eot?t=1475303214'); /* IE9*/
+    src: url('#{$folder}iconfont.eot?t=1475303214#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$folder}iconfont.woff?t=1475303214') format('woff'), /* chrome, firefox */
+    url('#{$folder}iconfont.ttf?t=1475303214') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('#{$folder}iconfont.svg?t=1475303214#iconfont') format('svg'); /* iOS 4.1- */
+  }
+
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .icon-more:before { content: "\e600"; }
+  .icon-morelist:before { content: "\e601"; }
+  .icon-shuffle:before { content: "\e609"; }
+  .icon-skipnext:before { content: "\e604"; }
+  .icon-skipprevious:before { content: "\e605"; }
+  .icon-repeatone:before { content: "\e60b"; }
+  .icon-volumeoff:before { content: "\e606"; }
+  .icon-volumedown:before { content: "\e607"; }
+  .icon-star:before { content: "\e602"; }
+  .icon-icon10:before { content: "\e601"; }
+  .icon-repeat:before { content: "\e60a"; }
+  .icon-list:before { content: "\e60d"; }
+  .icon-play:before { content: "\e603"; }
+  .icon-pause:before { content: "\e60c"; }
+  .icon-volumeup:before { content: "\e608"; }
+}

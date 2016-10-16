@@ -1,0 +1,30 @@
+@import "../../../../node_modules/sassdash/scss/sassdash";
+
+@mixin webkit-scrollbar(
+  $webkit-scrollbar-track: (),
+  $webkit-scrollbar-thumb: (),
+  $webkit-scrollbar-thumb_window-inactive: ()) {
+  &::-webkit-scrollbar {
+    @content;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    @if _size($webkit-scrollbar-track) > 0 {
+      @include _declare($webkit-scrollbar-track);
+    }
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    @if _size($webkit-scrollbar-thumb) > 0 {
+      @include _declare($webkit-scrollbar-thumb);
+    }
+  }
+  &::-webkit-scrollbar-thumb:window-inactive {
+    @if _size($webkit-scrollbar-thumb_window-inactive) > 0 {
+      @include _declare($webkit-scrollbar-thumb_window-inactive);
+    }
+  }
+}
+

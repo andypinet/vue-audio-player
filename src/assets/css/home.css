@@ -1,0 +1,148 @@
+@import url(../../../node_modules/keen-ui/dist/keen-ui.css);
+@font-face {
+  font-family: "iconfont";
+  src: url("../icon/iconfont.eot?t=1475303214");
+  /* IE9*/
+  src: url("../icon/iconfont.eot?t=1475303214#iefix") format("embedded-opentype"), url("../icon/iconfont.woff?t=1475303214") format("woff"), url("../icon/iconfont.ttf?t=1475303214") format("truetype"), url("../icon/iconfont.svg?t=1475303214#iconfont") format("svg");
+  /* iOS 4.1- */ }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-more:before {
+  content: "\e600"; }
+
+.icon-morelist:before {
+  content: "\e601"; }
+
+.icon-shuffle:before {
+  content: "\e609"; }
+
+.icon-skipnext:before {
+  content: "\e604"; }
+
+.icon-skipprevious:before {
+  content: "\e605"; }
+
+.icon-repeatone:before {
+  content: "\e60b"; }
+
+.icon-volumeoff:before {
+  content: "\e606"; }
+
+.icon-volumedown:before {
+  content: "\e607"; }
+
+.icon-star:before {
+  content: "\e602"; }
+
+.icon-icon10:before {
+  content: "\e601"; }
+
+.icon-repeat:before {
+  content: "\e60a"; }
+
+.icon-list:before {
+  content: "\e60d"; }
+
+.icon-play:before {
+  content: "\e603"; }
+
+.icon-pause:before {
+  content: "\e60c"; }
+
+.icon-volumeup:before {
+  content: "\e608"; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+button:focus {
+  outline: none; }
+
+html {
+  overflow: hidden; }
+
+#app {
+  height: 100vh; }
+
+.ui-icon {
+  font-size: 21px; }
+
+.navbar__btn {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  width: 48px;
+  height: 48px; }
+
+.ui-toolbar-title {
+  max-width: 65vw;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.photo-cover {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #f3f3f3; }
+
+.player {
+  height: calc(100% - 56px);
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (device-aspect-ratio: 40 / 71) and (-webkit-device-pixel-ratio: 2) {
+    .player {
+      height: calc(100% - 56px - 68px); } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .player {
+      height: calc(100% - 56px - 68px); } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .player {
+      height: calc(100% - 56px - 68px); } }
+  @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+    .player {
+      height: calc(100% - 56px - 68px); } }
+  .player__inner {
+    height: 100%; }
+    .player__inner.vux-flexbox > .vux-flexbox-item {
+      -webkit-box-flex: 0;
+      -webkit-flex: none;
+              flex: none;
+      width: auto;
+      width: 100%; }
+  .player__showcase {
+    height: calc(100% - 90px);
+    padding-top: 5px;
+    padding-bottom: 16px; }
+  .player__lyric-container {
+    height: 100%; }
+  .player__control {
+    height: 90px; }
+
+.weui_actionsheet_menu {
+  max-height: 60vh;
+  overflow: auto; }
+
+.weui_actionsheet_cell.active {
+  background-color: #4aa7ff; }
+
+.player-error .player-error__image {
+  display: block;
+  width: 100%; }
+
+.anu-navbar__left .navbar__btn {
+  margin-right: 8px; }
+.anu-navbar__center {
+  width: calc(100% - 112px); }
+.anu-navbar__right .navbar__btn {
+  margin-left: 8px; }
+
+.anu-title {
+  width: 100%; }
+
+

@@ -1,0 +1,140 @@
+@import "../../../node_modules/keen-ui/dist/keen-ui.css";
+@import "../../../node_modules/sass-mediaqueries/media-queries";
+@import "../icon/iconfont";
+@import "mixins/*";
+
+@include init-iconfont("../icon/");
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+button:focus { outline:none }
+
+html {
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+}
+
+.ui-icon {
+  font-size: 21px;
+}
+
+@mixin ---navbar-btn() {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  size: 48px;
+}
+
+.navbar__btn {
+  @include ---navbar-btn();
+}
+
+// fix
+.ui-toolbar-title {
+  max-width:65vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// toolbar
+.photo-cover {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+
+.photo-1 {
+  //background-image: url('http://i.imgur.com/Fln32Fv.jpg');
+}
+
+@mixin ---player-for-ios() {
+  @include iphone5() {
+    height: calc(100% - 56px - 68px);
+  }
+
+  @include iphone6() {
+    height: calc(100% - 56px - 68px);
+  }
+
+  @include iphone6-plus() {
+    height: calc(100% - 56px - 68px);
+  }
+
+  // high ios safari
+  @supports (overflow:-webkit-marquee) and (justify-content:inherit)
+  {
+    height: calc(100% - 56px - 68px);
+  }
+}
+
+// audio player
+.player {
+  height: calc(100% - 56px);
+  @include ---player-for-ios();
+  padding-left: 15px;
+  padding-right: 15px;
+  &__inner {
+    height:100%;
+    @include fix-flexbox() {
+      width:100%;
+    }
+  }
+
+  &__showcase {
+    height: calc(100% - 90px);
+    padding-top: 5px;
+    padding-bottom: 16px;
+  }
+
+  &__lyric-container {
+    height:100%;
+  }
+
+  &__control {
+    height: 90px;
+  }
+}
+
+.weui_actionsheet_menu {
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.weui_actionsheet_cell {
+  &.active {
+    background-color: #4aa7ff;
+  }
+}
+
+.player-error {
+  .player-error__image {
+    display: block;
+    width: 100%;
+  }
+}
+
+.anu-navbar {
+  &__left {
+    .navbar__btn {
+      margin-right:8px;
+    }
+  }
+  &__center {
+    width: calc(100% - 112px);
+  }
+  &__right {
+    .navbar__btn {
+      margin-left:8px;
+    }
+  }
+}
+
+.anu-title {
+  width: 100%;
+}

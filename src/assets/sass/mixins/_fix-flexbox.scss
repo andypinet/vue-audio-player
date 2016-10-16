@@ -1,0 +1,7 @@
+@mixin fix-flexbox() {
+  &.vux-flexbox > .vux-flexbox-item {
+    flex: none;
+    width: auto;
+    @content;
+  }
+}

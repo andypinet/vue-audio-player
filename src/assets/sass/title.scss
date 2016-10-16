@@ -1,0 +1,25 @@
+.anu-title {
+  $sel: #{&};
+  overflow: hidden;
+  &:not(.scroll) {
+    text-align: center;
+  }
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    white-space: nowrap;
+    transition: all ease 1s;
+  }
+  &__sub {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+  }
+  &.small {
+    #{$sel}__wrapper {
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.lyric-viewer {
+  height: 100%;
+  overflow: auto; }
+  .lyric-viewer:not(.scroll) {
+    /* Track */
+    /* Handle */ }
+    .lyric-viewer:not(.scroll)::-webkit-scrollbar {
+      width: 0; }
+    .lyric-viewer:not(.scroll)::-webkit-scrollbar-track {
+      border-radius: 10px; }
+    .lyric-viewer:not(.scroll)::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 10px; }
+    .lyric-viewer:not(.scroll)::-webkit-scrollbar-thumb:window-inactive {
+      background: transparent; }
+  .lyric-viewer [tpl="item-template"] {
+    display: none; }
+
+.lyric-viewer {
+  position: relative; }
+  .lyric-viewer .item {
+    -webkit-transition: color ease 900ms, background-color, ease 900ms;
+    transition: color ease 900ms, background-color, ease 900ms; }
+    .lyric-viewer .item.active {
+      color: #ffffff;
+      background-color: #4aa7ff; }
+  .lyric-viewer .error {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: all ease 1.5s;
+    transition: all ease 1.5s; }
+  .lyric-viewer .anu-active {
+    z-index: 1;
+    opacity: 1;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s; }
+  .lyric-viewer .anu-hidden {
+    display: none; }
+
+

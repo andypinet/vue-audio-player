@@ -1,0 +1,59 @@
+@import "components/scrollbar";
+
+@mixin ---hide-lyric-viewer-scrollbar() {
+  @include webkit-scrollbar(
+      (
+        border-radius: 10px
+      ),
+      (
+        background: rgba(0,0,0,0),
+        border-radius: 10px
+      ),
+      (
+        background: rgba(0,0,0,0)
+      )
+  ) {
+    width: 0;
+  }
+}
+
+.lyric-viewer {
+  height:100%;
+  overflow: auto;
+  &:not(.scroll) {
+    @include ---hide-lyric-viewer-scrollbar();
+  }
+  [tpl="item-template"] {
+    display: none;
+  }
+}
+
+$time: 900ms;
+
+.lyric-viewer {
+  position: relative;
+  .item {
+    transition: color ease $time,
+                background-color, ease $time;
+    &.active {
+      color: #ffffff;
+      background-color: #4aa7ff;
+    }
+  }
+  .error {
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0;
+    z-index: -1;
+    transition: all ease 1.5s;
+  }
+  .anu-active {
+    z-index: 1;
+    opacity: 1;
+    transition: all ease 0.5s;
+  }
+  .anu-hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,136 @@
+@import "mixins/*";
+@import "components/stack-view";
+@import "../../../node_modules/anu-ui-slider/anu-ui-slider";
+
+@mixin ---audio-player-btn() {
+  display: block;
+  border: 0;
+  background-color: transparent;
+}
+
+.audio-player {
+  user-select: none;
+  &__btn {
+    @include ---audio-player-btn();
+  }
+  &__toggle {
+    position: relative;
+    border: 1px solid #cccccc;
+    border-radius: 1000px;
+    transform: translateY(1px);
+    @include stack-view() {
+      width: 40px;
+      height: 40px;
+    }
+    @include stack-view-item() {
+      opacity: 0;
+      left:0;
+      top:0;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  &__list {
+    i {
+      transform: translateY(2px);
+    }
+  }
+  &__showbar {
+    padding-bottom: 10px;
+    @include flexbox() {
+      justify-content: center;
+    }
+    @include fix-flexbox() {
+      &:nth-child(2) {
+        flex: 1;
+      }
+    }
+  }
+  &__progressbar-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__progressbar {
+    position: relative;
+    height: 8px;
+    @include stack-view() {
+      flex: 1;
+    }
+    @include stack-view-item() {
+      z-index: 1;
+      left:0;
+      top:0;
+    }
+  }
+  &__controlbar {
+    justify-content: space-between !important;
+    .icon-skipprevious {
+      font-size:30px;
+    }
+    .icon-skipnext {
+      font-size:30px;
+    }
+    .icon-play {
+      font-size:24px;
+    }
+    .icon-pause {
+      font-size:24px;
+    }
+    .ui-icon {
+      width:40px;
+      height:40px;
+      text-align: center;
+      line-height: 40px;
+    }
+    @include flexbox() {
+      justify-content: center;
+    }
+    @include fix-flexbox();
+  }
+  &__secondaryprogress {
+    user-select: none;
+    @include anu-ui-slider((
+      width: 100%,
+      height: 8px
+    ));
+    .progress {
+      background-color: transparent !important;
+    }
+    .total {
+      background-color: transparent !important;
+    }
+    &.active .progress {
+      background-color: #4aa7ff !important;
+    }
+    &:not(.active) input[type=range]::-webkit-slider-thumb {
+      background-color: transparent !important;
+    }
+  }
+  &__progress {
+    user-select: none;
+    @include anu-ui-slider((
+      width: 100%,
+      height: 8px
+    ));
+    &:not(.active) .progress {
+      background-color: transparent !important;
+    }
+
+    &:not(.active) input[type=range]::-webkit-slider-thumb {
+      background-color: transparent !important;
+    }
+  }
+  &__volume {
+    display: none;
+    user-select: none;
+    @include anu-ui-slider((
+      width: calc(100% - 30px),
+      height: 8px
+    )) {
+      position: fixed;
+      left: 15px;
+      top: 67px;
+    }
+  }
+}

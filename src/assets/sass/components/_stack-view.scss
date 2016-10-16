@@ -1,0 +1,21 @@
+@mixin stack-view() {
+  &.stack-view {
+    /*!*/
+    @content;
+    .stack-view__item {
+      position: absolute;
+      z-index:-1;
+      &.active {
+        z-index:1;
+      }
+    }
+  }
+}
+
+@mixin stack-view-item() {
+  &.stack-view {
+    .stack-view__item {
+      @content;
+    }
+  }
+}

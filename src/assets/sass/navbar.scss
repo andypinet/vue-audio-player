@@ -1,0 +1,23 @@
+.anu-navbar {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+  &.text-color-black {
+    color: rgba(0,0,0,0.87);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  //&__left {
+  //  flex: 0;
+  //}
+  //&__center {
+  //  flex: 1;
+  //}
+  //&__right {
+  //  flex: 0;
+  //}
+}
